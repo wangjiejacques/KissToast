@@ -5,11 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/KissToast.svg?style=flat)](http://cocoapods.org/pods/KissToast)
 [![Platform](https://img.shields.io/cocoapods/p/KissToast.svg?style=flat)](http://cocoapods.org/pods/KissToast)
 
+## Screenshots
+
+![alt tag](https://github.com/WANGjieJacques/KissToast/blob/master/Example/screenshot.png?raw=true)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+iOS 8.0
 
 ## Installation
 

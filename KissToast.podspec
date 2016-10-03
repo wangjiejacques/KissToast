@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/WANGjieJacques/KissToast'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://github.com/WANGjieJacques/KissToast/blob/master/Example/screenshot.png?raw=true'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'WANG Jie' => 'jacques09125715@gmail.com' }
   s.source           = { :git => 'https://github.com/WANGjieJacques/KissToast.git', :tag => s.version.to_s }
