@@ -13,6 +13,10 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```
+Toast.Builder(text: "This is a toast").duration(1).bottomSpace(100).build().show()
+```
+
 ## Requirements
 
 iOS 8.0
