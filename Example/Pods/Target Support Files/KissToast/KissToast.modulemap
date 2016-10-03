@@ -1,0 +1,6 @@
+framework module KissToast {
+  umbrella header "KissToast-umbrella.h"
+
+  export *
+  module * { export * }
+}

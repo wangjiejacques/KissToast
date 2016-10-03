@@ -1,0 +1,16 @@
+PODS:
+  - KissToast (0.1.0)
+
+DEPENDENCIES:
+  - KissToast (from `../`)
+
+EXTERNAL SOURCES:
+  KissToast:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KissToast: 6d5d152da3f191d5ea126f45af46063f0d5bbf1e
+
+PODFILE CHECKSUM: e31e657182b63fef855d41a9514ab943ef49f4a9
+
+COCOAPODS: 1.1.0.rc.2

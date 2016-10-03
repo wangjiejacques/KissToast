@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KissToast
 
 class ViewController: UIViewController {
 
@@ -15,9 +16,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func showToast(_ sender: AnyObject) {
+        Toast.Builder(text: "This is a toast").duration(1).build().show()
     }
 
 }
