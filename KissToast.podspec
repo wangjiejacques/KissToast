@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  This CocoaPod provides the ability to use a `Toast.show("message", "duration")` to display a toast.
+  This CocoaPod provides the ability to use a `Toast.Builder(text: "This is a toast").duration(1).bottomSpace(100).build().show()` to display a toast.
                        DESC
 
   s.homepage         = 'https://github.com/WANGjieJacques/KissToast'
