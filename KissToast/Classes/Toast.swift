@@ -112,7 +112,8 @@ public class Toast {
         toastWindow.windowLevel = UIWindowLevelAlert
 
         let toast = UILabel(frame: toastWindow.bounds)
-        toast.font = UIFont.boldSystemFont(ofSize: 17)
+        toast.font = UIFont.boldSystemFont(ofSize: 14)
+        toast.numberOfLines = 0
         toast.textColor = UIColor.white
         toast.round(cornerRadius: 4)
         toast.textAlignment = .center
