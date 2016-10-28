@@ -92,7 +92,7 @@ public class Toast {
             windowFrame.origin.y = topSpace
         }
         toastWindow = UIWindow(frame: windowFrame)
-        class NoStatusBarViewController: UIViewController {
+        class ToastRootViewController: UIViewController {
             weak var toast: Toast!
 
             convenience init(toast: Toast) {
@@ -107,7 +107,7 @@ public class Toast {
                 return toast.prefersStatusBarHidden
             }
         }
-        toastWindow.rootViewController = NoStatusBarViewController()
+        toastWindow.rootViewController = ToastRootViewController()
         toastWindow.screen = UIScreen.main
         toastWindow.windowLevel = UIWindowLevelAlert
 
