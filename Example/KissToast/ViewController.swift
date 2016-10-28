@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showToast(_ sender: AnyObject) {
-        Toast.Builder(text: "This is a toast").duration(1).bottomSpace(100).build().show()
+        Toast.Builder(text: "This is a toast").duration(1).bottomSpace(space: 100).build().show()
     }
 
 }

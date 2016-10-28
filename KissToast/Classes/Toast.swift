@@ -18,14 +18,16 @@ public class Toast {
     private let duration: Double
     private let statusBarStyle: UIStatusBarStyle
     private let prefersStatusBarHidden: Bool
-    private let bottomSpace: CGFloat
+    private let bottomSpace: CGFloat?
+    private let topSpace: CGFloat?
 
     public class Builder {
         fileprivate let text: String
         fileprivate var duration: Double = 2
         fileprivate var statusBarStyle: UIStatusBarStyle = .default
         fileprivate var prefersStatusBarHidden = false
-        fileprivate var bottomSpace: CGFloat = 150
+        fileprivate var bottomSpace: CGFloat?
+        fileprivate var topSpace: CGFloat?
 
         public init(text: String) {
             self.text = text
@@ -46,8 +48,19 @@ public class Toast {
             return self
         }
 
-        public func bottomSpace(_ bottomSpace: CGFloat) -> Builder {
-            self.bottomSpace = bottomSpace
+        public func bottomSpace(space: CGFloat) -> Builder {
+            guard topSpace == nil else {
+                fatalError("You can not set both top space and bottom space")
+            }
+            self.bottomSpace = space
+            return self
+        }
+
+        public func topSpace(space: CGFloat) -> Builder {
+            guard bottomSpace == nil else {
+                fatalError("You can not set both top space and bottom space")
+            }
+            self.topSpace = space
             return self
         }
 
@@ -62,6 +75,7 @@ public class Toast {
         self.statusBarStyle = builder.statusBarStyle
         self.prefersStatusBarHidden = builder.prefersStatusBarHidden
         self.bottomSpace = builder.bottomSpace
+        self.topSpace = builder.topSpace
     }
 
     public func show() {
@@ -70,7 +84,13 @@ public class Toast {
         }
         let screenBounds = UIScreen.main.bounds
         let marginH: CGFloat = 20
-        let windowFrame = CGRect(x: marginH, y: screenBounds.maxY-bottomSpace, width: screenBounds.width-marginH*2, height: 50)
+        var windowFrame = CGRect(x: marginH, y: screenBounds.maxY-150, width: screenBounds.width-marginH*2, height: 50)
+        if let bottomSpace = bottomSpace {
+            windowFrame.origin.y = screenBounds.maxY-bottomSpace
+        }
+        if let topSpace = topSpace {
+            windowFrame.origin.y = topSpace
+        }
         toastWindow = UIWindow(frame: windowFrame)
         class NoStatusBarViewController: UIViewController {
             weak var toast: Toast!
