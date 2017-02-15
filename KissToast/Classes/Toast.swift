@@ -78,10 +78,7 @@ public class Toast {
         self.topSpace = builder.topSpace
     }
 
-    public func show() {
-        guard toastWindow == nil else {
-            return
-        }
+    var toastFrame: CGRect {
         let screenBounds = UIScreen.main.bounds
         let marginH: CGFloat = 20
         var windowFrame = CGRect(x: marginH, y: screenBounds.maxY-150, width: screenBounds.width-marginH*2, height: 50)
@@ -91,7 +88,15 @@ public class Toast {
         if let topSpace = topSpace {
             windowFrame.origin.y = topSpace
         }
-        toastWindow = UIWindow(frame: windowFrame)
+        return windowFrame
+    }
+
+    public func show() {
+        guard toastWindow == nil else {
+            return
+        }
+
+        toastWindow = UIWindow(frame: toastFrame)
         class ToastRootViewController: UIViewController {
             weak var toast: Toast!
 
@@ -111,7 +116,16 @@ public class Toast {
         toastWindow.screen = UIScreen.main
         toastWindow.windowLevel = UIWindowLevelAlert
 
-        let toast = UILabel(frame: toastWindow.bounds)
+        show(in: toastWindow, frame: toastWindow.bounds)
+        toastWindow.makeKeyAndVisible()
+    }
+
+    public func show(`in` view: UIView) {
+        show(in: view, frame: nil)
+    }
+
+    func show(`in` view: UIView, frame: CGRect?) {
+        let toast = UILabel(frame: frame ?? toastFrame)
         toast.font = UIFont.boldSystemFont(ofSize: 14)
         toast.numberOfLines = 0
         toast.textColor = UIColor.white
@@ -121,18 +135,18 @@ public class Toast {
         toast.backgroundColor = UIColor(rgb: 0x363636)
         toast.alpha = 0
 
-        toastWindow.addSubview(toast)
-        toastWindow.makeKeyAndVisible()
+        view.addSubview(toast)
         UIView.animate(withDuration: 0.4) {
             toast.alpha = 1
         }
         delay(duration) {
             UIView.animate(withDuration: 0.4, animations: {
                 toast.alpha = 0
-                }, completion: { (completion) in
-                    toastWindow = nil
+            }, completion: { (completion) in
+                toast.removeFromSuperview()
+                toastWindow = nil
             })
-            
+
         }
     }
 }
