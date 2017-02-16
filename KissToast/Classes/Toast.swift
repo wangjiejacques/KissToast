@@ -134,6 +134,8 @@ public class Toast {
         toast.text = text
         toast.backgroundColor = UIColor(rgb: 0x363636)
         toast.alpha = 0
+        toast.minimumScaleFactor = 0.5
+        toast.adjustsFontSizeToFitWidth = true
 
         view.addSubview(toast)
         UIView.animate(withDuration: 0.4) {
