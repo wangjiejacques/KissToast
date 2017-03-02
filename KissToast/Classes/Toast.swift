@@ -20,6 +20,7 @@ public class Toast {
     private let prefersStatusBarHidden: Bool
     private let bottomSpace: CGFloat?
     private let topSpace: CGFloat?
+    private weak var previousKeyWindow: UIWindow?
 
     public class Builder {
         fileprivate let text: String
@@ -117,6 +118,7 @@ public class Toast {
         toastWindow.windowLevel = UIWindowLevelAlert
 
         show(in: toastWindow, frame: toastWindow.bounds)
+        previousKeyWindow = UIApplication.shared.keyWindow
         toastWindow.makeKeyAndVisible()
     }
 
@@ -146,6 +148,7 @@ public class Toast {
                 toast.alpha = 0
             }, completion: { (completion) in
                 toast.removeFromSuperview()
+                self.previousKeyWindow?.makeKeyAndVisible()
                 toastWindow = nil
             })
 
