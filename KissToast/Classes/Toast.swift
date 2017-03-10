@@ -10,23 +10,20 @@ import Foundation
 
 import UIKit
 
-private var toastWindow: UIWindow!
-
 public class Toast {
+
+    var window: UIWindow? {
+        return UIApplication.shared.keyWindow
+    }
 
     private let text: String
     private let duration: Double
-    private let statusBarStyle: UIStatusBarStyle
-    private let prefersStatusBarHidden: Bool
     private let bottomSpace: CGFloat?
     private let topSpace: CGFloat?
-    private weak var previousKeyWindow: UIWindow?
 
     public class Builder {
         fileprivate let text: String
         fileprivate var duration: Double = 2
-        fileprivate var statusBarStyle: UIStatusBarStyle = .default
-        fileprivate var prefersStatusBarHidden = false
         fileprivate var bottomSpace: CGFloat?
         fileprivate var topSpace: CGFloat?
 
@@ -36,16 +33,6 @@ public class Toast {
 
         public func duration(_ duration: Double) -> Builder {
             self.duration = duration
-            return self
-        }
-
-        public func statusBarStyle(_ statusBarStyle: UIStatusBarStyle) -> Builder {
-            self.statusBarStyle = statusBarStyle
-            return self
-        }
-
-        public func prefersStatusBarHidden(_ prefersStatusBarHidden: Bool) -> Builder {
-            self.prefersStatusBarHidden = prefersStatusBarHidden
             return self
         }
 
@@ -73,8 +60,6 @@ public class Toast {
     init(_ builder: Builder) {
         self.text = builder.text
         self.duration = builder.duration
-        self.statusBarStyle = builder.statusBarStyle
-        self.prefersStatusBarHidden = builder.prefersStatusBarHidden
         self.bottomSpace = builder.bottomSpace
         self.topSpace = builder.topSpace
     }
@@ -93,41 +78,14 @@ public class Toast {
     }
 
     public func show() {
-        guard toastWindow == nil else {
-            return
+        guard let window = window else {
+            preconditionFailure("The window can not be nil")
         }
-
-        toastWindow = UIWindow(frame: toastFrame)
-        class ToastRootViewController: UIViewController {
-            weak var toast: Toast!
-
-            convenience init(toast: Toast) {
-                self.init()
-                self.toast = toast
-            }
-            override var preferredStatusBarStyle: UIStatusBarStyle {
-                return toast.statusBarStyle
-            }
-
-            override var prefersStatusBarHidden: Bool {
-                return toast.prefersStatusBarHidden
-            }
-        }
-        toastWindow.rootViewController = ToastRootViewController()
-        toastWindow.screen = UIScreen.main
-        toastWindow.windowLevel = UIWindowLevelAlert
-
-        show(in: toastWindow, frame: toastWindow.bounds)
-        previousKeyWindow = UIApplication.shared.keyWindow
-        toastWindow.makeKeyAndVisible()
+        show(in: window)
     }
 
     public func show(`in` view: UIView) {
-        show(in: view, frame: nil)
-    }
-
-    func show(`in` view: UIView, frame: CGRect?) {
-        let toast = UILabel(frame: frame ?? toastFrame)
+        let toast = UILabel(frame: toastFrame)
         toast.font = UIFont.boldSystemFont(ofSize: 14)
         toast.numberOfLines = 0
         toast.textColor = UIColor.white
@@ -148,8 +106,6 @@ public class Toast {
                 toast.alpha = 0
             }, completion: { (completion) in
                 toast.removeFromSuperview()
-                self.previousKeyWindow?.makeKeyAndVisible()
-                toastWindow = nil
             })
 
         }
