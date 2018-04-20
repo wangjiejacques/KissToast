@@ -1,5 +1,5 @@
 PODS:
-  - KissToast (0.1.0)
+  - KissToast (0.4.4)
 
 DEPENDENCIES:
   - KissToast (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KissToast: 6d5d152da3f191d5ea126f45af46063f0d5bbf1e
+  KissToast: 668ce6b6c2332c24c7df3a254d08d32f112be471
 
-PODFILE CHECKSUM: e31e657182b63fef855d41a9514ab943ef49f4a9
+PODFILE CHECKSUM: 628b31fbd9230b0de3a6b6d5627e3f0c079f3934
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.5.0
