@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0580F31840EA49B67A406581 /* KissToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KissToast.podspec; path = ../KissToast.podspec; sourceTree = "<group>"; };
+		0580F31840EA49B67A406581 /* KissToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KissToast.podspec; path = ../KissToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0F5C0685F828DD234887A530 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		10EB926B35C3CE1D8080EC65 /* Pods-KissToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KissToast_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KissToast_Example/Pods-KissToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		328C16626B85D8704189A256 /* Pods-KissToast_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KissToast_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KissToast_Tests/Pods-KissToast_Tests.debug.xcconfig"; sourceTree = "<group>"; };
