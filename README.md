@@ -1,6 +1,6 @@
 # KissToast
 
-[![CI Status](http://img.shields.io/travis/WANG Jie/KissToast.svg?style=flat)](https://travis-ci.org/WANGjieJacques/KissToast)
+[![CI Status](http://img.shields.io/travis/WANG Jie/KissToast.svg?style=flat)](https://travis-ci.org/wangjiejacques/KissToast)
 [![Version](https://img.shields.io/cocoapods/v/KissToast.svg?style=flat)](http://cocoapods.org/pods/KissToast)
 
 ## Screenshots
