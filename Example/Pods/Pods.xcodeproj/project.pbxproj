@@ -12,7 +12,7 @@
 		3FAFB6001C2C55F4F0164D426888BA07 /* Pods-KissToast_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13A68A165603FEC269611AE22906FBA9 /* Pods-KissToast_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		614B4250DF26471CDF89CDFFA1EF5419 /* Pods-KissToast_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A22C77845021598D8DB419F2B1B31E48 /* Pods-KissToast_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87B42E0850C8A46BFEB32962DEA24647 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133241C73181626B6DAC1DD7F0306F7 /* Toast.swift */; };
-		A02E1C1D208E732900EA3F7D /* UIView+toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E1C1C208E732900EA3F7D /* UIView+toast.swift */; };
+		A02E1C1F208E775000EA3F7D /* UIView+toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E1C1E208E775000EA3F7D /* UIView+toast.swift */; };
 		AB2C280E0271EAF05CD58D7A2A9D3ABD /* KissToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21AC8985F847B5527EF572E02C5715DF /* KissToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5032713084C3399B3979F13C3304EAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		DCBE8AFA34610719B653C226DA806DF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -64,7 +64,7 @@
 		8BBBFE3A26F8BBFC4591744FBEBA5F94 /* KissToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KissToast-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96956B1FC66BD99A2CA3033526A25DC7 /* Pods_KissToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KissToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A02E1C1C208E732900EA3F7D /* UIView+toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+toast.swift"; sourceTree = "<group>"; };
+		A02E1C1E208E775000EA3F7D /* UIView+toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+toast.swift"; path = "KissToast/Classes/UIView+toast.swift"; sourceTree = "<group>"; };
 		A22C77845021598D8DB419F2B1B31E48 /* Pods-KissToast_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KissToast_Tests-umbrella.h"; sourceTree = "<group>"; };
 		A24C2A0BC358A23FBCB29B83695C5100 /* Pods-KissToast_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KissToast_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A4E1EA37C56D6E5C99F84F37744763FD /* KissToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KissToast.xcconfig; sourceTree = "<group>"; };
@@ -208,10 +208,10 @@
 		BD79DFA5182FB5FF0F91FE08FB41F9B7 /* KissToast */ = {
 			isa = PBXGroup;
 			children = (
+				A02E1C1E208E775000EA3F7D /* UIView+toast.swift */,
 				8133241C73181626B6DAC1DD7F0306F7 /* Toast.swift */,
 				4A3D180EB0044B4631F05C542529F423 /* UIColor+extension.swift */,
 				ACDD32CFD9DD711F7B91CAE76F503863 /* View+extension.swift */,
-				A02E1C1C208E732900EA3F7D /* UIView+toast.swift */,
 				5B773E54059CAC1993CBCF7C877D0DB0 /* Pod */,
 				89D66417BA4377802B8870A29B4D0334 /* Support Files */,
 			);
@@ -369,7 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5C714A66259012E2835F1440FC03DB /* KissToast-dummy.m in Sources */,
-				A02E1C1D208E732900EA3F7D /* UIView+toast.swift in Sources */,
+				A02E1C1F208E775000EA3F7D /* UIView+toast.swift in Sources */,
 				87B42E0850C8A46BFEB32962DEA24647 /* Toast.swift in Sources */,
 				22E03758B222EBA654B192537D0CC2AA /* UIColor+extension.swift in Sources */,
 				FAF61CE9ABE72109AE245C6C93CA41D8 /* View+extension.swift in Sources */,
