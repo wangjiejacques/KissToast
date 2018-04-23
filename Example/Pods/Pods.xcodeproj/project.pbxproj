@@ -12,6 +12,7 @@
 		3FAFB6001C2C55F4F0164D426888BA07 /* Pods-KissToast_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13A68A165603FEC269611AE22906FBA9 /* Pods-KissToast_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		614B4250DF26471CDF89CDFFA1EF5419 /* Pods-KissToast_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A22C77845021598D8DB419F2B1B31E48 /* Pods-KissToast_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87B42E0850C8A46BFEB32962DEA24647 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133241C73181626B6DAC1DD7F0306F7 /* Toast.swift */; };
+		A02E1C1D208E732900EA3F7D /* UIView+toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E1C1C208E732900EA3F7D /* UIView+toast.swift */; };
 		AB2C280E0271EAF05CD58D7A2A9D3ABD /* KissToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21AC8985F847B5527EF572E02C5715DF /* KissToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5032713084C3399B3979F13C3304EAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		DCBE8AFA34610719B653C226DA806DF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -39,11 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0030B2BF6DEA58430AED6AA5B4FAA8CE /* Pods_KissToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KissToast_Tests.framework; path = "Pods-KissToast_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0030B2BF6DEA58430AED6AA5B4FAA8CE /* Pods_KissToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KissToast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFA600547F8681AA7EDEC514805FDD6 /* Pods-KissToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KissToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		13A68A165603FEC269611AE22906FBA9 /* Pods-KissToast_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KissToast_Example-umbrella.h"; sourceTree = "<group>"; };
 		14ACCDCD00D3F354FBD4ADA7650027DD /* Pods-KissToast_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KissToast_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		177BD3A8DC993D2A78F1E23C879F1BB0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		177BD3A8DC993D2A78F1E23C879F1BB0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B423879E706EF60E51F2B6E0B87E79D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E5D59CCB1AC66B95FB03331947446E0 /* KissToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KissToast-dummy.m"; sourceTree = "<group>"; };
 		21AC8985F847B5527EF572E02C5715DF /* KissToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KissToast-umbrella.h"; sourceTree = "<group>"; };
@@ -56,20 +57,21 @@
 		5860FAAF71D206506816D795D4768C28 /* Pods-KissToast_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KissToast_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5D8F4DBD17E31E440C77017FF7EAFD64 /* Pods-KissToast_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KissToast_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6B72296507FD3E0CC30D2D2D64804F2A /* KissToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KissToast.framework; path = KissToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E3B3BE4F62A088EEB3CC1AB74E90E6F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6B72296507FD3E0CC30D2D2D64804F2A /* KissToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KissToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E3B3BE4F62A088EEB3CC1AB74E90E6F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7E692389EA74BE98376D33EE8019BD07 /* Pods-KissToast_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KissToast_Example-dummy.m"; sourceTree = "<group>"; };
 		8133241C73181626B6DAC1DD7F0306F7 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = KissToast/Classes/Toast.swift; sourceTree = "<group>"; };
 		8BBBFE3A26F8BBFC4591744FBEBA5F94 /* KissToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KissToast-prefix.pch"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96956B1FC66BD99A2CA3033526A25DC7 /* Pods_KissToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KissToast_Example.framework; path = "Pods-KissToast_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96956B1FC66BD99A2CA3033526A25DC7 /* Pods_KissToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KissToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02E1C1C208E732900EA3F7D /* UIView+toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+toast.swift"; sourceTree = "<group>"; };
 		A22C77845021598D8DB419F2B1B31E48 /* Pods-KissToast_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KissToast_Tests-umbrella.h"; sourceTree = "<group>"; };
 		A24C2A0BC358A23FBCB29B83695C5100 /* Pods-KissToast_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KissToast_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A4E1EA37C56D6E5C99F84F37744763FD /* KissToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KissToast.xcconfig; sourceTree = "<group>"; };
 		A7084FA732690EE86658CD2C76F6E901 /* Pods-KissToast_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KissToast_Tests-dummy.m"; sourceTree = "<group>"; };
 		ACDD32CFD9DD711F7B91CAE76F503863 /* View+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+extension.swift"; path = "KissToast/Classes/View+extension.swift"; sourceTree = "<group>"; };
 		AF2BEBA89CDA07428E4AE692917DAB3F /* Pods-KissToast_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KissToast_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		B2941F36387C64CAA664B136844ECD75 /* KissToast.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = KissToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B2941F36387C64CAA664B136844ECD75 /* KissToast.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = KissToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B511D4FA95B3F7200153E3B46387EC9E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C62DF159D791DE8C43FFDC1DDE88F091 /* Pods-KissToast_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KissToast_Example.modulemap"; sourceTree = "<group>"; };
 		D8F7C11BC63F1340C9C9BDF779082647 /* Pods-KissToast_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KissToast_Tests.modulemap"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				8133241C73181626B6DAC1DD7F0306F7 /* Toast.swift */,
 				4A3D180EB0044B4631F05C542529F423 /* UIColor+extension.swift */,
 				ACDD32CFD9DD711F7B91CAE76F503863 /* View+extension.swift */,
+				A02E1C1C208E732900EA3F7D /* UIView+toast.swift */,
 				5B773E54059CAC1993CBCF7C877D0DB0 /* Pod */,
 				89D66417BA4377802B8870A29B4D0334 /* Support Files */,
 			);
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5C714A66259012E2835F1440FC03DB /* KissToast-dummy.m in Sources */,
+				A02E1C1D208E732900EA3F7D /* UIView+toast.swift in Sources */,
 				87B42E0850C8A46BFEB32962DEA24647 /* Toast.swift in Sources */,
 				22E03758B222EBA654B192537D0CC2AA /* UIColor+extension.swift in Sources */,
 				FAF61CE9ABE72109AE245C6C93CA41D8 /* View+extension.swift in Sources */,
