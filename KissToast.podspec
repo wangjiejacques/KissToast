@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KissToast'
-  s.version          = '0.4.5'
+  s.version          = '0.4.6'
   s.summary          = 'A simple and stupid Toast implementation with Swift'
 
 # This description is used to generate tags and improve search results.
