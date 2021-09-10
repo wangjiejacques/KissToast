@@ -10,11 +10,11 @@ import UIKit
 
 public extension UIView {
 
-    public func showBottomToast(text: String, bottomSpace: CGFloat = 150, duration: TimeInterval = 2) {
+    func showBottomToast(text: String, bottomSpace: CGFloat = 150, duration: TimeInterval = 2) {
        Toast.Builder(text: text).duration(duration).bottomSpace(space: bottomSpace).build().show()
     }
 
-    public func showTopToast(text: String, topSpace: CGFloat = 100, duration: TimeInterval = 2) {
+    func showTopToast(text: String, topSpace: CGFloat = 100, duration: TimeInterval = 2) {
         Toast.Builder(text: text).duration(duration).topSpace(space: topSpace).build().show()
     }
 }

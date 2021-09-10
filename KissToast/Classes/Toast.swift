@@ -67,7 +67,7 @@ public class Toast {
     var toastFrame: CGRect {
         let screenBounds = UIScreen.main.bounds
         let marginH: CGFloat = 20
-        var windowFrame = CGRect(x: marginH, y: screenBounds.maxY-150, width: screenBounds.width-marginH*2, height: 50)
+        var windowFrame = CGRect(x: marginH, y: screenBounds.maxY-150, width: screenBounds.width-marginH*2, height: 44)
         if let bottomSpace = bottomSpace {
             windowFrame.origin.y = screenBounds.maxY-bottomSpace
         }
@@ -86,13 +86,13 @@ public class Toast {
 
     public func show(`in` view: UIView) {
         let toast = UILabel(frame: toastFrame)
-        toast.font = UIFont.boldSystemFont(ofSize: 14)
+        toast.font = UIFont.systemFont(ofSize: 14)
         toast.numberOfLines = 0
-        toast.textColor = UIColor.white
-        toast.round(cornerRadius: 4)
+        toast.textColor = UIColor.black
+        toast.round(cornerRadius: 10)
         toast.textAlignment = .center
         toast.text = text
-        toast.backgroundColor = UIColor(rgb: 0x363636)
+        toast.backgroundColor = UIColor(rgb: 0xFFEFE0).withAlphaComponent(0.8)
         toast.alpha = 0
         toast.minimumScaleFactor = 0.5
         toast.adjustsFontSizeToFitWidth = true
