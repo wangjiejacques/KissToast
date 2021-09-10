@@ -92,7 +92,7 @@ public class Toast {
         toast.round(cornerRadius: 10)
         toast.textAlignment = .center
         toast.text = text
-        toast.backgroundColor = UIColor(rgb: 0xFFEFE0).withAlphaComponent(0.8)
+        toast.backgroundColor = UIColor(rgb: 0xFFDCBC).withAlphaComponent(0.8)
         toast.alpha = 0
         toast.minimumScaleFactor = 0.5
         toast.adjustsFontSizeToFitWidth = true
